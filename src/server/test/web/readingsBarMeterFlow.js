@@ -241,7 +241,11 @@ mocha.describe('readings API', () => {
                         });
                     // Check that the API reading is equal to what it is expected to equal
                     expectReadingToEqualExpected(res, expected);
+
+                    // must overwrite cell N2 with 6820 and put back to original formula when done: 
+                    // = (MATCH(0, $F:$F, 0) - 5) * $F$2 + 4
                 });
+
 
 
             
